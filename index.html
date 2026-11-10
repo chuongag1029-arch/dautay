@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giải Rubik 3×3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Giải Rubik 3×3</h1>
+  <p>Chọn một màu, rồi bấm vào ô muốn tô.</p>
+
+  <section id="cube-view">
+    <h2>Xem khối 3D</h2>
+
+    <twisty-player
+  id="cube-player"
+  puzzle="3x3x3"
+  control-panel="bottom"
+  background="none">
+</twisty-player>
+      <div id="cube3d"></div>
+    </div>
+
+    <button id="rotate-cube">Xoay góc nhìn</button>
+    <button id="zoom-in">Phóng to +</button>
+    <button id="zoom-out">Thu nhỏ −</button>
+    <button id="reset-view">Đặt lại góc nhìn</button>
+  </section>
+
+  <div id="rubik"></div>
+
+  <button id="check">Kiểm tra màu</button>
+  <button id="solve">Giải Rubik</button>
+  <button id="scramble">Tạo mẫu đã xáo trộn</button>
+
+  <p id="result"></p>
+  <section id="solution"></section>
+
+  <script src="https://cdn.jsdelivr.net/npm/cubejs@1.3.2/lib/cube.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cubejs@1.3.2/lib/solve.js"></script>
+  <script
+  src="https://cdn.cubing.net/v0/js/cubing/twisty"
+  type="module">
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
